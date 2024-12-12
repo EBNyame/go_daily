@@ -1,8 +1,11 @@
 // ---------------------------------------------------------
-// EXERCISE: Convert and Fix
+// EXERCISE: Count the Arguments
 //
-//  Fix the code by using the conversion expression.
+//  Print the count of the command-line arguments
+//
+// INPUT
+//  bilbo balbo bungo
 //
 // EXPECTED OUTPUT
-//  15.5
+//  There are 3 names.
 // ---------------------------------------------------------
