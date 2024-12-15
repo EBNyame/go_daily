@@ -11,4 +11,6 @@ func main() {
 
 	fmt.Println(utf8.RuneCountInString(kName))
 	fmt.Println(utf8.RuneCountInString(name))
+	fmt.Println(kName, ":", len(kName))
+
 }
