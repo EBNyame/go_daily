@@ -7,7 +7,7 @@ import (
 )
 
 const usage = '[command] [string]
-Available commands: lower, upper and lowercase'
+Available commands: lower, upper and title'
 
 
 
