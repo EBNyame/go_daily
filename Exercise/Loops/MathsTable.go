@@ -124,7 +124,7 @@ func maths() {
 		for i := 0; i <= size; i++ {
 			fmt.Printf("%5d", i)
 			for j := 0; j <= size; j++ {
-				fmt.Printf("%5d", i+j)
+				fmt.Printf("%5d", j+i)
 			}
 			fmt.Println()
 		}
@@ -148,6 +148,19 @@ func maths() {
 				fmt.Println()
 			}
 
+		} //for division
+	} else if operator == "//" {
+		fmt.Printf("%5s", "//")
+		for i := 0; i <= size; i++ {
+			fmt.Printf("%5d", i)
+		}
+
+		for i := 0; i <= size; i++ {
+			fmt.Printf("%5d", i)
+			for j := 0; j <= size; j++ {
+				fmt.Printf("%5d", j/i)
+			}
+			fmt.Println()
 		}
 	}
 
