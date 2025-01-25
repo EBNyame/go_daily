@@ -13,7 +13,9 @@ import "fmt"
 // ---------------------------------------------------------
 
 func TwoSums() {
-	for i := 0; i < 10; i++ {
-		fmt.Printf("%d", i)
+	var sum int
+	for i := 1; i <= 10; i++ {
+		sum += i
 	}
+	fmt.Println("Sum: ", sum)
 }
