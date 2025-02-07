@@ -9,9 +9,6 @@ func main() {
 	const totalTicket = 50
 	var remainingTickets = totalTicket
 	var conferenceName = "Go Conference"
-	// fmt.Printf("Welcome to %v booking application\n", conferenceName)
-	// fmt.Printf("we have a total of %v tickets and %v are still available.\n", totalTicket, remainingTickets)
-	// fmt.Println("Get your tickets here to attend")
 
 	greet(conferenceName, remainingTickets, totalTicket)
 
@@ -19,31 +16,13 @@ func main() {
 
 	for {
 		firstName, lastName, userMail, userTickets := getUserInput()
-		// var firstName string
-		// fmt.Println("first name: ")
-		// fmt.Scan(&firstName)
 
-		// var lastName string
-		// fmt.Println("Enter your last name: ")
-		// fmt.Scan(&lastName)
-
-		// var userMail string
-		// fmt.Println("Enter your email: ")
-		// fmt.Scan(&userMail)
-
-		// var userTickets int
-		// fmt.Println("Enter number of tickets: ")
-		// fmt.Scan(&userTickets)
-
-		// isValidName := len(firstName) >= 2 && len(lastName) >= 2
-		// isValidEmail := strings.Contains(userMail, "@")
-		// isValidTicket := userTickets > 0 && userTickets <= remainingTickets
 		isValidName, isValidEmail, isValidTicket := validateUserInput(firstName, lastName, userMail, userTickets, remainingTickets)
 
 		if isValidName && isValidEmail && isValidTicket {
 			remainingTickets = remainingTickets - userTickets
 			fmt.Println(remainingTickets)
-			// totalRemainingTickets = remainingTickets - userTickets
+
 			bookings = append(bookings, firstName+" "+lastName)
 
 			fmt.Printf("%v remaining tickets for the %v \n", remainingTickets, conferenceName)
@@ -54,13 +33,6 @@ func main() {
 
 			firstNames := getFirstNames(bookings)
 			fmt.Printf("The first names of bookings are: %v ", firstNames)
-
-			// firstNames := []string{}
-			// for _, booking := range bookings {
-			// 	var names = strings.Fields(booking)
-			// 	firstNames = append(firstNames, names[0])
-			// }
-			// fmt.Println(firstNames)
 
 			noTickets := remainingTickets == 0
 			if noTickets {
@@ -79,9 +51,6 @@ func main() {
 				fmt.Println("number of input you entered is invalid")
 			}
 		}
-
-		// var totalRemainingTickets int
-
 	}
 
 }
@@ -100,14 +69,6 @@ func getFirstNames(bookings []string) []string {
 		firstNames = append(firstNames, names[0])
 	}
 	return firstNames
-}
-
-func validateUserInput(firstName string, lastName string, userMail string, userTickets int, remainingTickets int) (bool, bool, bool) {
-	isValidName := len(firstName) >= 2 && len(lastName) >= 2
-	isValidEmail := strings.Contains(userMail, "@")
-	isValidTicket := userTickets > 0 && userTickets <= remainingTickets
-
-	return isValidName, isValidEmail, isValidTicket
 }
 
 func getUserInput() (string, string, string, int) {
@@ -129,4 +90,12 @@ func getUserInput() (string, string, string, int) {
 
 	return firstName, lastName, userMail, userTickets
 
+}
+
+func validateUserInput(firstName string, lastName string, userMail string, userTickets int, remainingTickets int) (bool, bool, bool) {
+	isValidName := len(firstName) >= 2 && len(lastName) >= 2
+	isValidEmail := strings.Contains(userMail, "@")
+	isValidTicket := userTickets > 0 && userTickets <= remainingTickets
+
+	return isValidName, isValidEmail, isValidTicket
 }
