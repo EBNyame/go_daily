@@ -9,4 +9,6 @@ import "fmt"
 func main() {
 	fmt.Println("My name is Exodus Blessed Nyame")
 	fmt.Println("I'm learning Go for backend development!")
+
+	// variable()
 }
