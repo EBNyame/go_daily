@@ -21,6 +21,12 @@ func main() {
 	myName := fullName("Exodus", "Nyame")
 
 	fmt.Printf("my name is %v and the results my final result is %v. \n", myName, results)
+
+	mycheck := check(10)
+	fmt.Println(mycheck)
+
+	loops()
+	sumArr()
 }
 
 func multiply(x int, y int) int {
